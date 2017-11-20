@@ -1,0 +1,12 @@
+1) Navigate to directory containing stanford-ner.jar file.
+
+2) Set up property file, referencing trainFile name and name of model file to output to (serializeTo).
+
+(N.b. if want to tain model on more than one file, instead of setting the trainFile property or flag, set the trainFileList property or flag, usinge a comma separated list of files.)
+
+3) Train the model:
+
+> java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -prop train_hansard_motor_neurone.prop
+
+4) Use the model to score a test file:
+
